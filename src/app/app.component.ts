@@ -18,9 +18,23 @@ export class AppComponent {
 
   imgUrl = "../assets/BL_logo_square_png.png";
   url = "https://www.bridgelabz.com";
+  nameError:string=""
+
 
   onClick($event: any) {
     console.log("Save Button Is Clicked!", $event);
     window.open(this.url, "_blank"); 
+  }
+
+  onInput($event: any)
+  {
+    console.log("Change Event Occurred!", $event.data);
+    const nameRegex = RegExp('^[A-Z]{1}[a-zA-Z\\s]{2,}$')
+    if(nameRegex.test(this.userName))
+    {
+      this.nameError="";
+      return;
+    }
+    this.nameError ="Name is Incorrect!";
   }
 }

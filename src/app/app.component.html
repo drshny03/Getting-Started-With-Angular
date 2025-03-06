@@ -5,8 +5,13 @@
     alt="The BridgeLabz logo: a Bridge to Employment through a Lab Works." />
 
   <div class="input-container">
-    <input [(ngModel)]="userName" placeholder="Enter your name" />
+    <input (input) = "onInput($event)" [(ngModel)]="userName" placeholder="Enter your name" /> 
+    <span class = error-output>{{this.nameError}}</span>
   </div>
 </div>
+<!-- <div>
+  <input  [(ngModel)] = "userName" />
+  <span class = error-output>{{this.nameError}}</span>
+</div> -->
 
 <router-outlet></router-outlet>
