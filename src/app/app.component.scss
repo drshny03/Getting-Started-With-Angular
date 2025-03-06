@@ -1,9 +1,22 @@
-img{
-    display: block;
-    margin: 0 auto;
-    width: 25%;
-}
-
-.main-div{
+.main-div {
+    text-align: center; 
+    margin-top: 50px;
+  }
+  
+  img {
+    width: 150px;
+    cursor: pointer;
+  }
+  
+  .input-container {
+    margin-top: 20px;
+  }
+  
+  input {
+    padding: 10px;
+    font-size: 16px;
     text-align: center;
-}
+    border: 2px solid #000;
+    border-radius: 5px;
+  }
+  
